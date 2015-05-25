@@ -1,13 +1,13 @@
 Summary:	Changes the rpath or runpath in binaries
 Name:		chrpath
-Version:	0.13
-Release:	13
+Version:	0.16
+Release:	1
 License:	GPL
 Group:		Applications/Editors
 #Source0ActiveFtp
-Source0:	http://ftp.tux.org/pub/X-Windows/ftp.hungry.com/chrpath/%{name}-%{version}.tar.gz
-# Source0-md5:	b73072a8fbba277558c50364b65bb407
-Patch0:		%{name}-keepgoing.patch
+Source0:	https://alioth.debian.org/frs/download.php/latestfile/813/%{name}-%{version}.tar.gz
+# Source0-md5:	2bf8d1d1ee345fc8a7915576f5649982
+URL:		http://directory.fsf.org/project/chrpath
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	libtool
@@ -22,7 +22,6 @@ linker should look for the libraries needed for a program.
 
 %prep
 %setup -q
-%patch0 -p1
 
 %build
 %{__libtoolize}
